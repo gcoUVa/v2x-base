@@ -1,0 +1,65 @@
+GCO - V2X
+===============================
+
+Supported boards
+----------------
+
+Hummingboard 2 Edge
+
+
+Quick Start Guide
+-----------------
+
+Once you have downloaded the source of all projects, you will have to
+call:
+
+$: MACHINE=solidrun-imx6 DISTRO=poky source setup-environment build
+
+After this step, you will be with everything need for build an image.
+
+Burning the generated image
+---------------------------
+
+Once it is generated a .wic.gz image, you shall dive into /build/tmp/deploy/images
+
+gunzip -c core-image-v2x-dev-solidrun-imx6.wic.gz | sudo dd of=/dev/sdX bs=1M  iflag=fullblock oflag=direct conv=fsync
+
+Contributing
+------------
+
+To contribute to the development of this BSP and/or submit patches for
+new boards please send the patches against the respective project as
+informated bellow:
+
+The following layers are included on this release:
+
+
+ * poky: base build system and metadata
+   Path: sources/poky
+   GIT: git://git.yoctoproject.org/poky
+   Mailing list: https://lists.yoctoproject.org/listinfo/yocto
+
+ * meta-openembedded: extra packages and features
+   Path: sources/common/meta-openembedded
+   GIT: git://git.openembedded.org/meta-openembedded
+   Mailing list: http://lists.linuxtogo.org/cgi-bin/mailman/listinfo/openembedded-devel
+   Note: Use [meta-oe] in subject to easy the processing
+
+ * meta-freescale: support for Freescale's processors and board
+   Path: sources/freescale/meta-freescale
+   Project: https://github.com/Freescale/meta-freescale
+   GIT: git://github.com/Freescale/meta-freescale.git
+   Mailing list: https://lists.yoctoproject.org/listinfo/meta-freescale
+   
+ * meta-freescale: support for SolidRun's iMX6 based
+   Path: sources/solidrun/meta-solidrun-bsp
+   Project: https://github.com/SolidRun/meta-solidrun-bsp
+   GIT: https://github.com/SolidRun/meta-solidrun-bsp.git
+   Mailing list: http://forum.solid-run.com/linux-kernel-and-bootloaders-on-cubox-i-and-hummin-f10
+   
+ * meta-v2x: V2X support
+   Path: sources/gco/meta-v2x
+   Project: https://github.com/gcoUVa/meta-v2x
+   GIT: git://github.com/gcoUVa/meta-v2x.git
+   Mailing list: javier.fernandez.pastrana@gmail.com
+   Note: Use [GCO-UVa] in subject to easy the processing

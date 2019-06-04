@@ -1,10 +1,15 @@
 GCO - V2X
 ===============================
 
+Summary
+----------
+This is part of a Yocto compilation. To see the complete instructions please refer to (REF GIST)
+
 Supported boards
 ----------------
 
 Hummingboard 2 Edge
+Although it has not been tested, it should be supported (LISTA DE OTRAS TARJETAS)
 
 
 Quick Start Guide
@@ -15,7 +20,7 @@ call:
 
 $: MACHINE=solidrun-imx6 DISTRO=poky source setup-environment build
 
-After this step, you will be with everything need for build an image.
+After this step, you will have everything you need to build an image "core-image-v2x-dev".
 
 Burning the generated image
 ---------------------------
@@ -28,10 +33,8 @@ Contributing
 ------------
 
 To contribute to the development of this BSP and/or submit patches for
-new boards please send the patches against the respective project as
-informated bellow:
-
-The following layers are included on this release:
+new boards. Please send the patches against the respective project as
+informed bellow:
 
 
  * poky: base build system and metadata
